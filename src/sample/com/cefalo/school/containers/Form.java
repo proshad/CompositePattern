@@ -1,5 +1,6 @@
 package sample.com.cefalo.school.containers;
 
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -18,19 +19,14 @@ import java.util.List;
 public class Form extends VBox implements Component {
     List<Component> components = new ArrayList<Component>();
 
-    private Form() {
+    public Form() {
 
-    }
-
-    public Form(String title) {
-        setStyle("-fx-background-color: ghostwhite; -fx-padding: 5; -fx-spacing: 10;-fx-alignment: center");
-        Text txtTitle = new Text(title);
-        txtTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
     }
 
     public void add(Component component) {
         this.components.add(component);
         getChildren().add((Node) component);
+        setDefaultConfigs();
     }
 
     public void remove(Component component) {
@@ -55,5 +51,10 @@ public class Form extends VBox implements Component {
         return response;
     }
 
+    private void setDefaultConfigs() {
+        setStyle("-fx-border-color: black;");
+        setPadding(new Insets(10, 10, 10, 10));
+        setSpacing(5);
+    }
 
 }

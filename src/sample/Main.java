@@ -1,8 +1,6 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -14,7 +12,6 @@ import javafx.stage.Stage;
 import sample.com.cefalo.school.containers.FieldGroup;
 import sample.com.cefalo.school.containers.Form;
 import sample.com.cefalo.school.controls.*;
-import sample.com.cefalo.school.models.ComboItem;
 import sample.com.cefalo.school.validators.ValidationResponse;
 
 public class Main extends Application {
@@ -24,81 +21,70 @@ public class Main extends Application {
         stage.setTitle("Form Validation Using Composite Design Pattern");
 
         VBox layout = new VBox();
-        layout.autosize();
-        layout.setStyle("-fx-background-color: #2f4f4f");
-
+        layout.setMinWidth(700.0);
+        layout.setMinHeight(800.0);
+        layout.setMaxWidth(800.0);
+        layout.setMaxHeight(1000.0);
         Scene scene = new Scene(layout, Color.GRAY);
         stage.setScene(scene);
 
-    /*Custom Form Component*/
-        final Component form = new Form("Form");
+//   main form
+        final Component myForm = new Form();
 
-    /*Custom Login Field Group Component*/
-        Component loginFieldGroup = new FieldGroup();
-        Component email = new EmailField("Email*");
-        loginFieldGroup.add(email);
+//    email and website component
+        Component emailWebGroup = new FieldGroup();
+        Component email = new EmailField("Email Address");
+        emailWebGroup.add(email);
+        Component website = new TextField("Personal Website");
+        emailWebGroup.add(website);
+        myForm.add(emailWebGroup);
 
-        Component password = new PasswordField();
-        loginFieldGroup.add(password);
-        form.add(loginFieldGroup);
+//    Name group component
+        Component nameGroup = new FieldGroup();
+        Component firstName = new TextField("First Name");
+        nameGroup.add(firstName);
+        Component lastName = new TextField("Last Name");
+        nameGroup.add(lastName);
+        myForm.add(nameGroup);
 
-    /*Custom Basic Info Field Group Component*/
-        Component basicInfoFieldGroup = new FieldGroup();
-        final Component firstName = new TextField("First Name*");
-        basicInfoFieldGroup.add(firstName);
+//    Address field group
+        Component addressGroup = new FieldGroup();
+        Component address = new TextField("Address");
+        addressGroup.add(address);
+        Component city = new TextField("City");
+        addressGroup.add(city);
+        Component state = new TextField("State");
+        addressGroup.add(state);
+        Component zipCode = new TextField("ZIP Code");
+        addressGroup.add(zipCode);
+        myForm.add(addressGroup);
 
-        Component lastName = new TextField("Last Name*");
-        basicInfoFieldGroup.add(lastName);
+//    Contacts Field Group
+        Component contactsGroup = new FieldGroup();
+        Component dayPhone = new PhoneNumberField("Day Phone");
+        contactsGroup.add(dayPhone);
+        Component eveningPhone = new PhoneNumberField("Evening Phone");
+        contactsGroup.add(eveningPhone);
+        Component mobilePhone = new PhoneNumberField("Mobile Phone");
+        contactsGroup.add(mobilePhone);
+        Component fax = new PhoneNumberField("Fax");
+        contactsGroup.add(fax);
+        myForm.add(contactsGroup);
 
-        ObservableList<ComboItem> data =
-                FXCollections.observableArrayList(
-                        new ComboItem(-1, "Select Gender"),
-                        new ComboItem(0, "Male"),
-                        new ComboItem(1, "Female"),
-                        new ComboItem(2, "Other"));
-        Component gender = new ComboBox("Gender", data);
-        basicInfoFieldGroup.add(gender);
+//        Add form to layout
+        layout.getChildren().add((Node) myForm);
 
-        Component maritalStatus = new CheckBox("Married");
-        basicInfoFieldGroup.add(maritalStatus);
-
-        form.add(basicInfoFieldGroup);
-
-    /*Custom Address Field Group Component*/
-        Component addressFieldGroup = new FieldGroup();
-        Component address = new TextField("Address*");
-        addressFieldGroup.add(address);
-
-        Component city = new TextField("City*");
-        addressFieldGroup.add(city);
-
-        Component state = new TextField("State*");
-        addressFieldGroup.add(state);
-
-        Component zipCode = new TextField("ZIP Code*");
-        addressFieldGroup.add(zipCode);
-        form.add(addressFieldGroup);
-
-    /*Custom Contacts Field Group Component*/
-        Component contactFieldGroup = new FieldGroup();
-        Component phone = new PhoneNumberField("Phone*");
-        contactFieldGroup.add(phone);
-
-        Component mobilePhone = new PhoneNumberField("Mobile Phone*");
-        contactFieldGroup.add(mobilePhone);
-
-        form.add(contactFieldGroup);
-        layout.getChildren().add((Node) form);
-
-        FxButton button = new FxButton("Save", Pos.BOTTOM_LEFT);
+        CustomButton button = new CustomButton("Save", Pos.BOTTOM_RIGHT);
         button.onClickHandler(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                ValidationResponse response = form.validate();
-                FxDialog.show(stage, response);
+                ValidationResponse response = myForm.validate();
+                CustomDialog.show(stage, response);
             }
         });
 
-        layout.getChildren().add(button);
+        layout.getChildren().add((Node) button);
+
+
         stage.show();
     }
 

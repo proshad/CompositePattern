@@ -16,7 +16,7 @@ public class PhoneNumberField extends HBox implements Component {
     private TextField textField;
 
     private PhoneNumberField() {
-
+        setDefaultConfigs();
     }
 
     public PhoneNumberField(String labelText) {

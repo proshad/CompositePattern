@@ -3,6 +3,9 @@ package sample.com.cefalo.school.containers;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import sample.com.cefalo.school.controls.Component;
 import sample.com.cefalo.school.validators.ValidationResponse;
 import sample.com.cefalo.school.validators.ValidationStatus;
@@ -16,10 +19,13 @@ import java.util.List;
 public class FieldGroup extends VBox implements Component {
     List<Component> components = new ArrayList<Component>();
 
+    public FieldGroup(){
+        setDefaultConfigs();
+    }
+
     public void add(Component component) {
         this.components.add(component);
         getChildren().add((Node) component);
-
         setDefaultConfigs();
     }
 
@@ -50,4 +56,5 @@ public class FieldGroup extends VBox implements Component {
         setPadding(new Insets(10, 10, 10, 10));
         setSpacing(5);
     }
+
 }

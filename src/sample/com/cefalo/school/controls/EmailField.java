@@ -16,7 +16,7 @@ public class EmailField extends HBox implements Component {
     private TextField textField;
 
     private EmailField() {
-
+        setDefaultConfigs();
     }
 
     public EmailField(String labelText) {

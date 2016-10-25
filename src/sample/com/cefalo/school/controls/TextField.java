@@ -15,7 +15,7 @@ public class TextField extends HBox implements Component {
     private javafx.scene.control.TextField textField;
 
     private TextField() {
-
+        setDefaultConfigs();
     }
 
     public TextField(String labelText) {
