@@ -26,7 +26,6 @@ public class Form extends VBox implements Component {
     public void add(Component component) {
         this.components.add(component);
         getChildren().add((Node) component);
-        setDefaultConfigs();
     }
 
     public void remove(Component component) {
@@ -49,12 +48,6 @@ public class Form extends VBox implements Component {
         }
 
         return response;
-    }
-
-    private void setDefaultConfigs() {
-        setStyle("-fx-border-color: black;");
-        setPadding(new Insets(10, 10, 10, 10));
-        setSpacing(5);
     }
 
 }

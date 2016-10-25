@@ -53,8 +53,7 @@ public class FieldGroup extends VBox implements Component {
 
     private void setDefaultConfigs() {
         setStyle("-fx-border-color: black;");
-        setPadding(new Insets(10, 10, 10, 10));
-        setSpacing(5);
+        setPadding(new Insets(5, 5, 5, 5));
     }
 
 }

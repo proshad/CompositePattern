@@ -28,10 +28,10 @@ public class Main extends Application {
         Scene scene = new Scene(layout, Color.GRAY);
         stage.setScene(scene);
 
-//   main form
+        //   main form
         final Component myForm = new Form();
 
-//    email and website component
+        //    email and website component
         Component emailWebGroup = new FieldGroup();
         Component email = new EmailField("Email Address");
         emailWebGroup.add(email);
@@ -39,7 +39,7 @@ public class Main extends Application {
         emailWebGroup.add(website);
         myForm.add(emailWebGroup);
 
-//    Name group component
+        //    Name group component
         Component nameGroup = new FieldGroup();
         Component firstName = new TextField("First Name");
         nameGroup.add(firstName);
@@ -47,7 +47,7 @@ public class Main extends Application {
         nameGroup.add(lastName);
         myForm.add(nameGroup);
 
-//    Address field group
+        //    Address field group
         Component addressGroup = new FieldGroup();
         Component address = new TextField("Address");
         addressGroup.add(address);
@@ -59,7 +59,7 @@ public class Main extends Application {
         addressGroup.add(zipCode);
         myForm.add(addressGroup);
 
-//    Contacts Field Group
+        //    Contacts Field Group
         Component contactsGroup = new FieldGroup();
         Component dayPhone = new PhoneNumberField("Day Phone");
         contactsGroup.add(dayPhone);

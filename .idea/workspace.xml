@@ -61,17 +61,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.610687" vertical-offset="65" max-vertical-offset="1515">
-              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="860" max-vertical-offset="1515">
+              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2787#3013#0" expanded="true" />
-                <element signature="e#3002#3003#0" expanded="true" />
-                <element signature="e#3141#3142#0" expanded="true" />
-                <element signature="e#3169#3170#0" expanded="true" />
+                <element signature="e#2827#3053#0" expanded="true" />
+                <element signature="e#3042#3043#0" expanded="true" />
+                <element signature="e#3181#3182#0" expanded="true" />
+                <element signature="e#3209#3210#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FieldGroup.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FieldGroup.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/com/cefalo/school/containers/FieldGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="975">
-              <caret line="57" column="5" selection-start-line="53" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.79389316" vertical-offset="305" max-vertical-offset="960">
+              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#613#624#0" expanded="true" />
@@ -165,8 +165,8 @@
       <file leaf-file-name="Form.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/com/cefalo/school/containers/Form.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="915">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="810">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#607#618#0" expanded="true" />
@@ -221,9 +221,9 @@
         <option value="$PROJECT_DIR$/src/sample/com/cefalo/school/controls/PhoneNumberField.java" />
         <option value="$PROJECT_DIR$/src/sample/com/cefalo/school/controls/TextField.java" />
         <option value="$PROJECT_DIR$/src/sample/com/cefalo/school/controls/EmailField.java" />
-        <option value="$PROJECT_DIR$/src/sample/com/cefalo/school/containers/FieldGroup.java" />
-        <option value="$PROJECT_DIR$/src/sample/com/cefalo/school/containers/Form.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/com/cefalo/school/containers/Form.java" />
+        <option value="$PROJECT_DIR$/src/sample/com/cefalo/school/containers/FieldGroup.java" />
       </list>
     </option>
   </component>
@@ -650,12 +650,12 @@
       <created>1359379246138</created>
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1477368034937" duration="9738000" />
+      <workItem from="1477368034937" duration="10274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11040000" />
+    <option name="totallyTimeSpent" value="11576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-189" width="1920" height="985" extended-state="6" />
@@ -722,10 +722,10 @@
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2787#3013#0" expanded="true" />
-            <element signature="e#3002#3003#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-            <element signature="e#3169#3170#0" expanded="true" />
+            <element signature="e#2827#3053#0" expanded="true" />
+            <element signature="e#3042#3043#0" expanded="true" />
+            <element signature="e#3181#3182#0" expanded="true" />
+            <element signature="e#3209#3210#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -862,10 +862,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="860" max-vertical-offset="1515">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2827#3053#0" expanded="true" />
+            <element signature="e#3042#3043#0" expanded="true" />
+            <element signature="e#3181#3182#0" expanded="true" />
+            <element signature="e#3209#3210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/com/cefalo/school/containers/Form.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="810">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#607#618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/com/cefalo/school/containers/FieldGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="975">
-          <caret line="57" column="5" selection-start-line="53" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.79389316" vertical-offset="305" max-vertical-offset="960">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#613#624#0" expanded="true" />
@@ -875,31 +900,6 @@
             <element signature="e#947#948#0" expanded="true" />
             <element signature="e#986#987#0" expanded="true" />
             <element signature="e#1028#1029#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/com/cefalo/school/containers/Form.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="915">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#607#618#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.610687" vertical-offset="65" max-vertical-offset="1515">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#3013#0" expanded="true" />
-            <element signature="e#3002#3003#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-            <element signature="e#3169#3170#0" expanded="true" />
           </folding>
         </state>
       </provider>
