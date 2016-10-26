@@ -26,4 +26,8 @@ public class CustomResponse {
     public List<String> getMessages() {
         return messages;
     }
+
+    public void addMessage(String msg){
+        messages.add(msg);
+    }
 }

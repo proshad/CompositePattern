@@ -1,12 +1,12 @@
 package sample.com.cefalo.school.controls;
 
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import sample.com.cefalo.school.validators.CustomResponse;
-import sample.com.cefalo.school.validators.CustomValidator;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by proshad on 10/25/16.
@@ -14,6 +14,7 @@ import sample.com.cefalo.school.validators.CustomValidator;
 public class PhoneNumberField extends HBox implements Component {
     private Label label;
     private TextField textField;
+    private static final String VALID_PHONE_PATTERN = "^\\+(?:[0-9] ?){6,14}[0-9]$";
 
     public PhoneNumberField(String labelText) {
         this.label = new Label(labelText);
@@ -30,7 +31,27 @@ public class PhoneNumberField extends HBox implements Component {
     }
 
     public CustomResponse validate() {
-        return CustomValidator.validatePhone(this.label.getText(), this.textField.getText());
+        String name = this.label.getText();
+        String value = this.textField.getText();
+        CustomResponse response = new CustomResponse("1");
+        if (value.equals(null) || value.isEmpty()) {
+            String msg = "Invalid: field " + name + " cannot be empty.";
+            response.setStatus("0");
+            response.addMessage(msg);
+        } else {
+            if (!validateRegEx(value)) {
+                String msg = "Invalid: field " + name + " is not a correct format for phone number.";
+                response.setStatus("0");
+                response.addMessage(msg);
+            }
+        }
+        return response;
     }
+
+    private boolean validateRegEx(String str) {
+        Matcher matcher = Pattern.compile(VALID_PHONE_PATTERN).matcher(str);
+        return matcher.matches();
+    }
+
 
 }
