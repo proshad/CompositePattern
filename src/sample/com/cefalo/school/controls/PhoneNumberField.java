@@ -5,9 +5,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import sample.com.cefalo.school.responses.CustomResponse;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * Created by proshad on 10/25/16.
  */
@@ -48,12 +45,7 @@ public class PhoneNumberField extends HBox implements Component {
         return response;
     }
 
-    private boolean validateRegEx(String str) {
-        Matcher matcher = Pattern.compile(VALID_PHONE_PATTERN).matcher(str);
-        return matcher.matches();
-    }
-
-    private static boolean validatePhoneAndFaxNumber(String phoneNo) {
+    private boolean validatePhoneAndFaxNumber(String phoneNo) {
         //validate phone numbers of format "1234567890"
         if (phoneNo.matches("\\d{10}")) return true;
             //validating phone number with -, . or spaces
