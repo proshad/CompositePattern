@@ -17,7 +17,6 @@ public class WebField extends HBox implements Component {
     private TextField textField;
 
     public WebField(String labelText) {
-        System.out.println("I'm from webfield class");
         this.label = new Label(labelText);
         this.textField = new javafx.scene.control.TextField();
         getChildren().addAll(this.label, this.textField);
@@ -34,17 +33,13 @@ public class WebField extends HBox implements Component {
     public CustomResponse validate() {
         String name = this.label.getText();
         String value = this.textField.getText();
-        System.out.println("1");
         CustomResponse response = new CustomResponse("1");
         if (value.equals(null) || value.isEmpty()) {
-            System.out.println("2");
             String msg = "Invalid: field " + name + " cannot be empty.";
             response.setStatus("0");
             response.addMessage(msg);
         } else {
-            System.out.println("3");
             if (!isValidURL(value)) {
-                System.out.println("4");
                 String msg = "Invalid: field " + name + " is not a correct format for web url";
                 response.setStatus("0");
                 response.addMessage(msg);
@@ -54,24 +49,17 @@ public class WebField extends HBox implements Component {
     }
 
     private boolean isValidURL(String url) {
-        System.out.println("5");
         URL u = null;
         try {
-            System.out.println("6");
             u = new URL(url);
         } catch (MalformedURLException e) {
-            System.out.println("7");
             return false;
         }
-
         try {
-            System.out.println("8");
             u.toURI();
         } catch (URISyntaxException e) {
-            System.out.println("9");
             return false;
         }
-        System.out.println("10");
         return true;
     }
 
