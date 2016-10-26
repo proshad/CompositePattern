@@ -1,1 +1,6 @@
-
+/tmp
+/.idea
+/.idea/*
+/out
+/out/*
+.DS_Store
