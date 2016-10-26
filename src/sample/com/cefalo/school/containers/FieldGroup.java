@@ -27,10 +27,6 @@ public class FieldGroup extends VBox implements Component {
         this.components.remove(component);
     }
 
-    public void getChild(int index) {
-        this.components.get(index);
-    }
-
     public CustomResponse validate() {
         CustomResponse response = new CustomResponse("1");
         for (Component component : components) {
