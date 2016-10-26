@@ -3,7 +3,7 @@ package sample.com.cefalo.school.controls;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import sample.com.cefalo.school.validators.CustomResponse;
+import sample.com.cefalo.school.responses.CustomResponse;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,7 +40,7 @@ public class PhoneNumberField extends HBox implements Component {
             response.addMessage(msg);
         } else {
             if (!validateRegEx(value)) {
-                String msg = "Invalid: field " + name + " is not a correct format for phone number.";
+                String msg = "Invalid: field " + name + " is not a correct format for phone number. First use country code.";
                 response.setStatus("0");
                 response.addMessage(msg);
             }

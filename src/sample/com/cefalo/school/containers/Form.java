@@ -3,7 +3,7 @@ package sample.com.cefalo.school.containers;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 import sample.com.cefalo.school.controls.Component;
-import sample.com.cefalo.school.validators.CustomResponse;
+import sample.com.cefalo.school.responses.CustomResponse;
 
 import java.util.ArrayList;
 import java.util.List;

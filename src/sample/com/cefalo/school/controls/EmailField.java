@@ -3,7 +3,7 @@ package sample.com.cefalo.school.controls;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import sample.com.cefalo.school.validators.CustomResponse;
+import sample.com.cefalo.school.responses.CustomResponse;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

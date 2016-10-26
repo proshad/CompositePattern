@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import sample.com.cefalo.school.containers.FieldGroup;
 import sample.com.cefalo.school.containers.Form;
 import sample.com.cefalo.school.controls.*;
-import sample.com.cefalo.school.validators.CustomResponse;
+import sample.com.cefalo.school.responses.CustomResponse;
 
 import java.util.List;
 
@@ -75,7 +75,7 @@ public class Main extends Application {
 //        Add form to layout
         layout.getChildren().add((Node) myForm);
 
-        CustomButton btn = new CustomButton("Save");
+        ButtonField btn = new ButtonField("Save");
         btn.onClickHandler(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
                 CustomResponse response = myForm.validate();
