@@ -3,7 +3,6 @@ package sample;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
@@ -12,7 +11,9 @@ import javafx.stage.Stage;
 import sample.com.cefalo.school.containers.FieldGroup;
 import sample.com.cefalo.school.containers.Form;
 import sample.com.cefalo.school.controls.*;
-import sample.com.cefalo.school.validators.ValidationResponse;
+import sample.com.cefalo.school.validators.CustomResponse;
+
+import java.util.List;
 
 public class Main extends Application {
 
@@ -21,10 +22,10 @@ public class Main extends Application {
         stage.setTitle("Form Validation Using Composite Design Pattern");
 
         VBox layout = new VBox();
-        layout.setMinWidth(700.0);
-        layout.setMinHeight(800.0);
-        layout.setMaxWidth(800.0);
-        layout.setMaxHeight(1000.0);
+        layout.setMinWidth(500.0);
+        layout.setMinHeight(500.0);
+        layout.setMaxWidth(600.0);
+        layout.setMaxHeight(700.0);
         Scene scene = new Scene(layout, Color.GRAY);
         stage.setScene(scene);
 
@@ -74,15 +75,24 @@ public class Main extends Application {
 //        Add form to layout
         layout.getChildren().add((Node) myForm);
 
-        CustomButton button = new CustomButton("Save", Pos.BOTTOM_RIGHT);
-        button.onClickHandler(new EventHandler<ActionEvent>() {
+        CustomButton btn = new CustomButton("Save");
+        btn.onClickHandler(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                ValidationResponse response = myForm.validate();
-                CustomDialog.show(stage, response);
+                CustomResponse response = myForm.validate();
+                System.out.println("***************************");
+                List<String> messages = response.getMessages();
+                if (messages.size() > 0) {
+                    for (String msg : messages) {
+                        System.out.println(msg);
+                    }
+                } else {
+                     System.out.println("Congratulations, all fields are valid!!");
+                }
+
             }
         });
 
-        layout.getChildren().add((Node) button);
+        layout.getChildren().add((Node) btn);
 
 
         stage.show();

@@ -1,14 +1,9 @@
 package sample.com.cefalo.school.containers;
 
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import sample.com.cefalo.school.controls.Component;
-import sample.com.cefalo.school.validators.ValidationResponse;
-import sample.com.cefalo.school.validators.ValidationStatus;
+import sample.com.cefalo.school.validators.CustomResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,13 +31,13 @@ public class Form extends VBox implements Component {
         this.components.get(index);
     }
 
-    public ValidationResponse validate() {
-        ValidationResponse response = new ValidationResponse(ValidationStatus.SUCCESS);
+    public CustomResponse validate() {
+        CustomResponse response = new CustomResponse("1");
         for (Component component : components) {
-            ValidationStatus status = component.validate().getStatus();
+            String status = component.validate().getStatus();
             List<String> messages = component.validate().getMessages();
-            if (status == ValidationStatus.ERROR) {
-                response.setStatus(status);//Overriding same value inside iteration. Need to find a better solution
+            if (status.equals("0")) {
+                response.setStatus(status);
                 response.getMessages().addAll(messages);
             }
         }

@@ -5,8 +5,8 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import sample.com.cefalo.school.validators.FieldValidator;
-import sample.com.cefalo.school.validators.ValidationResponse;
+import sample.com.cefalo.school.validators.CustomResponse;
+import sample.com.cefalo.school.validators.CustomValidator;
 
 /**
  * Created by proshad on 10/25/16.
@@ -14,10 +14,6 @@ import sample.com.cefalo.school.validators.ValidationResponse;
 public class PhoneNumberField extends HBox implements Component {
     private Label label;
     private TextField textField;
-
-    private PhoneNumberField() {
-        setDefaultConfigs();
-    }
 
     public PhoneNumberField(String labelText) {
         this.label = new Label(labelText);
@@ -32,29 +28,24 @@ public class PhoneNumberField extends HBox implements Component {
     }
 
     public void add(Component component) {
-        throw new UnsupportedOperationException("Can not add component.");
+        throw new UnsupportedOperationException();
     }
 
     public void remove(Component component) {
-        throw new UnsupportedOperationException("Nothing to remove.");
+        throw new UnsupportedOperationException();
     }
 
     public void getChild(int index) {
-        throw new UnsupportedOperationException("No child associated with leaf component.");
+        throw new UnsupportedOperationException();
     }
 
-    public ValidationResponse validate() {
-        return FieldValidator.validatePhone(this.label.getText(), this.textField.getText());
+    public CustomResponse validate() {
+        return CustomValidator.validatePhone(this.label.getText(), this.textField.getText());
     }
 
     private void setDefaultConfigs() {
-        setSpacing(5);
         setAlignment(Pos.CENTER_LEFT);
         setPadding(new Insets(5, 5, 5, 5));
-
-        this.textField.setPrefSize(250, 30);
-        this.textField.setStyle("-fx-font-size: 15pt;");
-
-        this.label.setStyle("-fx-font-size: 15pt;");
+        setSpacing(5);
     }
 }

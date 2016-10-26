@@ -13,21 +13,9 @@ import javafx.geometry.Insets;
 public class CustomButton extends HBox {
     private Button button;
 
-    private CustomButton() {
-
-    }
-
     public CustomButton(String label) {
         this.button = new Button(label);
         getChildren().add(this.button);
-
-        setDefaultConfigs();
-    }
-
-    public CustomButton(String label, Pos alignment) {
-        this.button = new Button(label);
-        getChildren().add(this.button);
-
         setDefaultConfigs();
     }
 
@@ -36,10 +24,7 @@ public class CustomButton extends HBox {
     }
 
     private void setDefaultConfigs() {
-        setAlignment(Pos.BOTTOM_LEFT);
+        setAlignment(Pos.BOTTOM_RIGHT);
         setPadding(new Insets(10, 10, 10, 10));
-        setSpacing(50);
-
-        this.button.setStyle("-fx-font-size: 15pt;");
     }
 }
