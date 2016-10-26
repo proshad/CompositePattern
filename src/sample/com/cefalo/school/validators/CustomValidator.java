@@ -16,7 +16,7 @@ public class CustomValidator {
         CustomResponse response = new CustomResponse("1");
         if(value.equals(null) || value.isEmpty()){
             response.setStatus("0");
-            response.getMessages().add(String.format("Field: %s Empty.", name));
+            response.getMessages().add(String.format("Invalid: %s cannot be Empty.", name));
         }
 
         return response;
@@ -30,7 +30,7 @@ public class CustomValidator {
 
         if(!checkRegEx(Pattern.compile(VALID_PHONE_REGEX), value)) {
             response.setStatus("0");
-            response.getMessages().add(String.format("Field: %s contains invalid phone number.", name));
+            response.getMessages().add(String.format("Invalid: %s contains invalid phone number.", name));
         }
 
         return response;
@@ -44,7 +44,7 @@ public class CustomValidator {
 
         if(!checkRegEx(Pattern.compile(VALID_EMAIL_REGEX), value)) {
             response.setStatus("0");
-            response.getMessages().add(String.format("Field: %s contains invalid email address.", name));
+            response.getMessages().add(String.format("Invalid: %s contains invalid email address.", name));
         }
 
         return response;
@@ -58,7 +58,7 @@ public class CustomValidator {
 
         if(!checkRegEx(Pattern.compile(VALID_ZIP_REGEX), value)) {
             response.setStatus("0");
-            response.getMessages().add(String.format("Field: %s contains ZIP Code.", name));
+            response.getMessages().add(String.format("Invalid: %s contains wrong ZIP Code.", name));
         }
 
         return response;

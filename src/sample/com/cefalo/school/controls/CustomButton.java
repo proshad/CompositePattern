@@ -16,15 +16,10 @@ public class CustomButton extends HBox {
     public CustomButton(String label) {
         this.button = new Button(label);
         getChildren().add(this.button);
-        setDefaultConfigs();
+        setAlignment(Pos.BOTTOM_RIGHT);
     }
 
     public void onClickHandler(EventHandler<ActionEvent> eventHandler) {
         this.button.setOnAction(eventHandler);
-    }
-
-    private void setDefaultConfigs() {
-        setAlignment(Pos.BOTTOM_RIGHT);
-        setPadding(new Insets(10, 10, 10, 10));
     }
 }

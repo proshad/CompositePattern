@@ -18,12 +18,6 @@ public class TextField extends HBox implements Component {
         this.label = new Label(labelText);
         this.textField = new javafx.scene.control.TextField();
         getChildren().addAll(this.label, this.textField);
-
-        setDefaultConfigs();
-    }
-
-    public String getText() {
-        return this.textField.getText();
     }
 
     public void add(Component component) {
@@ -34,17 +28,8 @@ public class TextField extends HBox implements Component {
         throw new UnsupportedOperationException();
     }
 
-    public void getChild(int index) {
-        throw new UnsupportedOperationException();
-    }
-
     public CustomResponse validate() {
         return CustomValidator.checkForEmptyField(this.label.getText(), this.textField.getText());
     }
 
-    private void setDefaultConfigs() {
-        setAlignment(Pos.CENTER_LEFT);
-        setPadding(new Insets(5, 5, 5, 5));
-        setSpacing(5);
-    }
 }

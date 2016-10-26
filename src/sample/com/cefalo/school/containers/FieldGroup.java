@@ -16,13 +16,12 @@ public class FieldGroup extends VBox implements Component {
     List<Component> components = new ArrayList<Component>();
 
     public FieldGroup(){
-        setDefaultConfigs();
     }
 
     public void add(Component component) {
         this.components.add(component);
         getChildren().add((Node) component);
-        setDefaultConfigs();
+        setStyle("-fx-border-color: black;");
     }
 
     public void remove(Component component) {
@@ -44,10 +43,5 @@ public class FieldGroup extends VBox implements Component {
             }
         }
         return response;
-    }
-
-    private void setDefaultConfigs() {
-        setStyle("-fx-border-color: black;");
-        setPadding(new Insets(5, 5, 5, 5));
     }
 }
