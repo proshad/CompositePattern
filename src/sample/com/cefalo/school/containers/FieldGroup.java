@@ -1,10 +1,13 @@
 package sample.com.cefalo.school.containers;
 
+import javafx.geometry.*;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 import sample.com.cefalo.school.controls.Component;
 import sample.com.cefalo.school.responses.CustomResponse;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +24,8 @@ public class FieldGroup extends VBox implements Component {
         this.components.add(component);
         getChildren().add((Node) component);
         setStyle("-fx-border-color: black;");
+        setSpacing(10);
+        setPadding(new Insets(5,5,5,5));
     }
 
     public void remove(Component component) {

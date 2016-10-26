@@ -53,7 +53,7 @@ public class Main extends Application {
         Component address = new TextField("Address");
         Component city = new TextField("City");
         Component state = new TextField("State");
-        Component zipCode = new TextField("ZIP Code");
+        Component zipCode = new PhoneNumberField("ZIP Code");
         addressGroup.add(address);
         addressGroup.add(city);
         addressGroup.add(state);
