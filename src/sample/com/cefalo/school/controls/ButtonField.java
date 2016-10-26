@@ -16,7 +16,8 @@ public class ButtonField extends HBox {
     public ButtonField(String label) {
         this.button = new Button(label);
         getChildren().add(this.button);
-        setAlignment(Pos.BOTTOM_RIGHT);
+        setAlignment(Pos.BOTTOM_LEFT);
+        setPadding(new Insets(10,10,10,10));
     }
 
     public void onClickHandler(EventHandler<ActionEvent> eventHandler) {

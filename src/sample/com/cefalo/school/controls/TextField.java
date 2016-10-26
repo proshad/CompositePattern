@@ -26,8 +26,8 @@ public class TextField extends HBox implements Component {
     }
 
     public CustomResponse validate() {
-        String name = this.label.getText();
-        String value = this.textField.getText();
+        String name = this.label.getText().trim();
+        String value = this.textField.getText().trim();
         CustomResponse response = new CustomResponse("1");
         if(value.equals(null) || value.isEmpty()){
             String msg = "Invalid: field "+name+ " cannot be empty.";
